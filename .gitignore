@@ -1,0 +1,25 @@
+# Python virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Training checkpoints and large dataset
+ElectronicComponentsDataset/
+runs/
+yolov8n.pt
+
+# Temporary files
+crop_test.jpg
+*.log
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
