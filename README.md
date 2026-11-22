@@ -40,7 +40,7 @@ Tespit edilen sınıf: **Resistor** (Güven Skoru: %10)
 
 ### Arduino Uno Kart Tespiti
 ![Arduino Kartı Tespiti](assets/arduino_pred.jpg)
-Kart üzerindeki yüzey montaj (SMD) blokları yerel komponent kümesi olarak başarıyla algılanmıştır.
+Kart üzerindeki SMD blokları kondansatör olarak algılanmıştır.
 
 ---
 
@@ -117,7 +117,3 @@ ElectronicComponentsRecognition/
 ```
 
 ---
-
-<div align="center">
-  <sub>BİL485 Derin Öğrenme / Computer Vision Dersi Kapsamında Hazırlanmıştır.</sub>
-</div>
