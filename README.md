@@ -20,25 +20,27 @@ Eğitilen model yalnızca akademik metriklerle sınırlı kalmamış; kullanıc�
 
 ## Gerçek Dünya Test Sonuçları
 
-Model, akıllı telefon kamerasıyla doğal oda ışığında ve ahşap masa üzerinde çekilen gerçek devre parçalarıyla test edilmiştir:
+Model, akıllı telefon kamerasıyla doğal oda ışığında ve ahşap masa üzerinde çekilen gerçek devre parçalarıyla test edilmiştir.
 
-| Ultrasonik Sensör (HC-SR04) | 5mm LED'ler |
-|:---:|:---:|
-| ![Sensör Tespiti](assets/sensor_pred.jpg) | ![LED Tespiti](assets/ledler_pred.jpg) |
-| **Tespit:** Sensor (%95 Güven) | **Tespit:** Led (%71 Güven) |
+### Ultrasonik Sensör Tespiti (HC-SR04)
+![Sensör Tespiti](assets/sensor_pred.jpg)
+Tespit edilen sınıf: **Sensor** (Güven Skoru: %95)
 
-| Push Butonlar | Karbon Dirençler |
-|:---:|:---:|
-| ![Buton Tespiti](assets/butonlar_pred.jpg) | ![Direnç Tespiti](assets/direncler_pred.jpg) |
-| **Tespit:** Button (%64 Güven) | **Tespit:** Resistor (%10 Güven) |
+### LED Bileşenleri Tespiti
+![LED Tespiti](assets/ledler_pred.jpg)
+Tespit edilen sınıf: **Led** (Güven Skoru: %71)
 
-<div align="center">
+### Buton Bileşenleri Tespiti
+![Buton Tespiti](assets/butonlar_pred.jpg)
+Tespit edilen sınıf: **Button** (Güven Skoru: %64, %33)
+
+### Direnç Bileşenleri Tespiti
+![Direnç Tespiti](assets/direncler_pred.jpg)
+Tespit edilen sınıf: **Resistor** (Güven Skoru: %10)
 
 ### Arduino Uno Kart Tespiti
 ![Arduino Kartı Tespiti](assets/arduino_pred.jpg)
-*Kart üzerindeki yüzey montaj (SMD) blokları kondansatör kümesi olarak başarıyla algılanmıştır.*
-
-</div>
+Kart üzerindeki yüzey montaj (SMD) blokları yerel komponent kümesi olarak başarıyla algılanmıştır.
 
 ---
 
