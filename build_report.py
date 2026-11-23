@@ -87,12 +87,19 @@ def create_report():
     run_sub = p_sub.add_run("YOLOv8 ile Elektronik Komponent Tespiti ve FastAPI Uygulaması")
     format_run(run_sub, font_name="Arial", size_pt=10, bold=False, color_rgb=(70, 70, 70))
 
-    p_student = doc.add_paragraph()
-    p_student.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    p_student.paragraph_format.space_before = Pt(2)
-    p_student.paragraph_format.space_after = Pt(14)
-    run_student = p_student.add_run("Samet Erilter  |  Öğrenci No: 24120205002")
-    format_run(run_student, font_name="Arial", size_pt=10.5, bold=True, color_rgb=(40, 40, 40))
+    p_student1 = doc.add_paragraph()
+    p_student1.alignment = WD_ALIGN_PARAGRAPH.LEFT
+    p_student1.paragraph_format.space_before = Pt(6)
+    p_student1.paragraph_format.space_after = Pt(1)
+    run_s1 = p_student1.add_run("Samet Erilter")
+    format_run(run_s1, font_name="Arial", size_pt=10.5, bold=True, color_rgb=(20, 20, 20))
+
+    p_student2 = doc.add_paragraph()
+    p_student2.alignment = WD_ALIGN_PARAGRAPH.LEFT
+    p_student2.paragraph_format.space_before = Pt(0)
+    p_student2.paragraph_format.space_after = Pt(14)
+    run_s2 = p_student2.add_run("24120205002")
+    format_run(run_s2, font_name="Arial", size_pt=10.5, bold=True, color_rgb=(40, 40, 40))
 
     # 1. Bolum
     add_clean_heading(doc, "1. Ödevin Amacı", space_before=18, space_after=8)

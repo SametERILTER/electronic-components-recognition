@@ -100,6 +100,7 @@ http://localhost:8000
 
 ---
 
-**Hazırlayan:** Samet Erilter (24120205002)  
-**Ders:** BİL485 Derin Öğrenme / Computer Vision Ödevi
+**Samet Erilter**  
+**24120205002**  
+BİL485 Derin Öğrenme / Computer Vision Ödevi
 
