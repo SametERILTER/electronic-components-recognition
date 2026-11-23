@@ -93,10 +93,9 @@ http://localhost:8000
 ## Kullanılan Teknolojiler
 
 - **Model:** YOLOv8 Nano (`ultralytics`)
-- **Derin Öğrenme Altyapısı:** PyTorch (CUDA 12.4 GPU Hızlandırması)
+- **Derin Öğrenme Altyapısı:** PyTorch
 - **Web Backend & Sunucu:** FastAPI & Uvicorn
 - **Veri Seti:** Roboflow Universe - Electronic Components Dataset
-- **Raporlama:** Python-docx & docx2pdf
 
 ---
 
