@@ -1,10 +1,10 @@
-# Derin Öğrenme ve YOLOv8 Tabanlı Elektronik Devre Bileşenleri ve Komponent Tespiti Sistemi
+# YOLOv8 ile Elektronik Devre Elemanları ve Komponent Tespiti
 
-Bu proje; bilgisayarlı görü (Computer Vision) ve modern nesne tespiti mimarilerini kullanarak, basılı devre kartları (PCB), prototip devreler ve elektronik bileşenler üzerindeki temel devre elemanlarını otomatik olarak tespit etmek, sınır kutuları (bounding box) ile konumlandırmak ve gerçek zamanlı sınıflandırmak amacıyla geliştirilmiş uçtan uca bir yapay zekâ mühendisliği çalışmasıdır.
+Bu proje, elektronik devre kartları üzerindeki bileşenleri (direnç, kondansatör, LED, buton, transistör, entegre, sensör vb.) derin öğrenme ve bilgisayarlı görü yöntemleriyle otomatik olarak tespit edip sınıflandırmak amacıyla geliştirilmiştir.
 
-Sistem, Roboflow Universe üzerindeki 9.800'den fazla devre görseliyle optimize edilmiş **YOLOv8** derin öğrenme omurgasını temel alır. Eğitilen model; dirençler, kondansatörler, entegre devreler (IC), LED'ler, butonlar, potansiyometreler, transistörler ve harici modül sensörleri dahil olmak üzere 8 farklı kritik bileşen sınıfını mikrosaniye seviyelerinde tespit edebilmektedir. 
+Model olarak nesne tespiti alanında hafif, hızlı ve yüksek doğruluğa sahip **YOLOv8 Nano** kullanılmış, Roboflow üzerindeki 9.800'den fazla devre fotoğrafıyla eğitilmiştir. Eğitilen model 8 farklı komponent sınıfını yüksek doğrulukla kutu içine alıp etiketleyebilmektedir.
 
-Eğitilen model yalnızca akademik metriklerle sınırlı kalmamış; kullanıcıların herhangi bir devre görselini kolayca yükleyip sonuçları canlı olarak inceleyebileceği, güven eşiklerini (confidence threshold) dinamik olarak ayarlayabileceği ve komponent yoğunluğunu analiz edebileceği modern ve hafif bir **FastAPI** web uygulaması olarak kullanıma sunulmuştur. Ayrıca sistem, Arduino eğitim setinde yer alan fiziksel komponentlerin akıllı telefon kameralarıyla çekilen gerçek fotoğrafları üzerinde test edilerek pratik dünya dayanıklılığı ve alan kayması (domain shift) analiziyle doğrulanmıştır.
+Kullanıcıların devre fotoğraflarını tarayıcıdan kolayca yükleyip sonuçları görebilmesi için sistem **FastAPI** ile çalışan bir web uygulaması hâline getirilmiştir. Ayrıca model, Arduino başlangıç setindeki gerçek parçaların telefonla çekilen fotoğraflarıyla test edilmiş ve gerçek ortam performansı değerlendirilmiştir.
 
 ---
 
@@ -12,9 +12,9 @@ Eğitilen model yalnızca akademik metriklerle sınırlı kalmamış; kullanıc�
 
 - **8 Farklı Komponent Sınıfı:** `Button`, `Capacitor`, `IC`, `Led`, `Pot`, `Resistor`, `Sensor`, `Transistor`
 - **Yüksek Doğruluk:** Bağımsız test setinde **%91.48 mAP@50** genel başarı oranı.
-- **Yüksek Çıkarım Hızı:** Görsel başına yalnızca **~3.9 milisaniye** (~256 FPS) çalışma hızı.
+- **Hızlı Tahmin Süresi:** Görsel başına yalnızca **~3.9 milisaniye** (~256 FPS) çalışma hızı.
 - **Modern Web Arayüzü:** FastAPI tabanlı, sürükle-bırak destekli, anlık görselleştiren web paneli.
-- **Gerçek Dünya Doğrulaması:** Arduino başlangıç setindeki gerçek devre elemanlarıyla test edilmiş ve doğrulanmıştır.
+- **Gerçek Ortam Testleri:** Arduino setindeki gerçek devre elemanlarıyla test edilmiş ve doğrulanmıştır.
 
 ---
 
@@ -99,3 +99,7 @@ http://localhost:8000
 - **Raporlama:** Python-docx & docx2pdf
 
 ---
+
+**Hazırlayan:** Samet Erilter (24120205002)  
+**Ders:** BİL485 Derin Öğrenme / Computer Vision Ödevi
+

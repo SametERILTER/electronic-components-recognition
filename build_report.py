@@ -83,9 +83,16 @@ def create_report():
     p_sub = doc.add_paragraph()
     p_sub.alignment = WD_ALIGN_PARAGRAPH.CENTER
     p_sub.paragraph_format.space_before = Pt(2)
-    p_sub.paragraph_format.space_after = Pt(14)
+    p_sub.paragraph_format.space_after = Pt(3)
     run_sub = p_sub.add_run("YOLOv8 ile Elektronik Komponent Tespiti ve FastAPI Uygulaması")
     format_run(run_sub, font_name="Arial", size_pt=10, bold=False, color_rgb=(70, 70, 70))
+
+    p_student = doc.add_paragraph()
+    p_student.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    p_student.paragraph_format.space_before = Pt(2)
+    p_student.paragraph_format.space_after = Pt(14)
+    run_student = p_student.add_run("Samet Erilter  |  Öğrenci No: 24120205002")
+    format_run(run_student, font_name="Arial", size_pt=10.5, bold=True, color_rgb=(40, 40, 40))
 
     # 1. Bolum
     add_clean_heading(doc, "1. Ödevin Amacı", space_before=18, space_after=8)
@@ -243,9 +250,9 @@ def create_report():
     add_clean_heading(doc, "8. Gerçek Görüntülerle Test ve Değerlendirme", space_before=14, space_after=6)
     add_clean_paragraph(
         doc,
-        "Modelin pratik dünya başarısını ve genelleme kapasitesini ölçmek amacıyla, Arduino başlangıç setinde yer alan "
-        "fiziksel komponentler akıllı telefon kamerasıyla doğal oda aydınlatması ve ahşap çalışma masası üzerinde fotoğraflanmış; "
-        "ardından model ile test edilmiştir. Elde edilen tespit sonuçları Şekil 4 - Şekil 8 arasında sunulmuştur.",
+        "Modelin gerçek ortamda nasıl çalıştığını test etmek amacıyla, Arduino başlangıç setindeki parçalar "
+        "telefon kamerasıyla oda ışığında ve masa üzerinde fotoğraflanarak modele verilmiştir. "
+        "Elde edilen tespit sonuçları Şekil 4 - Şekil 8 arasında gösterilmiştir.",
         space_before=2, space_after=8, line_spacing=1.15
     )
 
@@ -353,7 +360,7 @@ def create_report():
     add_clean_heading(doc, "Başarı ve Hata Analizi (Domain Shift Yorumu)", level=2, space_before=14, space_after=6)
     add_clean_paragraph(
         doc,
-        "Gerçek ortam fotoğraflarında elde edilen sonuçlar derin öğrenme ve bilgisayarlı görü prensipleri doğrultusunda şu şekilde yorumlanmıştır:\n"
+        "Elde edilen test sonuçları ve modelin karşılaştığı durumlar aşağıda değerlendirilmiştir:\n"
         "• Alan Kayması (Domain Shift): Eğitim veri setinde yer alan fotoğraflar homojen stüdyo aydınlatması altında, saf beyaz zemin (#FFFFFF) ve tekil makro yakın çekimlerden oluşmaktadır. Telefonla çekilen görüntülerde ise ahşap masa dokusu, çevresel gölgeler ve sıcak oda ışığı yer almaktadır. Buna rağmen model, özgün biçimsel özellikleri korunan ultrasonik sensörde %95, LED'de %71 ve butonlarda %64 güven skoruyla doğru tespit yapmıştır.\n"
         "• Güven Eşiği (Confidence Threshold) Dinamiği: Web arayüzünde varsayılan güven eşiği (%25) seçildiğinde, oda aydınlatmasındaki gölgeler sebebiyle düşük skor alan komponentler ekranda filtrelenmiştir. Güven eşiği %10-%15 seviyesine çekildiğinde dirençler ve diğer bileşenler kutu içine alınabilmiştir.\n"
         "• Morfolojik Benzerlik ve Karışıklıklar: LED fotoğraflarında model %71 ile LED tespit etmiş; ancak yanındaki bazı silindirik LED gövdelerini %59-%61 güvenle 'Capacitor' (elektrolitik kondansatör) olarak etiketlemiştir. Bu durum iki komponentin dikey silindirik gövde ve altından çıkan bacak yapısının yüksek geometrik benzerliğinden kaynaklanmaktadır.\n"
@@ -383,7 +390,7 @@ def create_report():
         ("Best Performance", "mAP@50: 0.9148 (%91.48)"),
         ("Inference Time", "3.90 ms / görsel (~256 FPS)"),
         ("Deployment Technology", "FastAPI"),
-        ("Repository", "https://github.com/samet/ElectronicComponentsRecognition (veya teslim linkiniz)")
+        ("Repository", "https://github.com/samet/electronic-components-recognition")
     ]
 
     table = doc.add_table(rows=1, cols=2)
